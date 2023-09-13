@@ -32,10 +32,10 @@ form.addEventListener('submit', async (event) => {
 
       movieContainer.innerHTML = `
         <img src="${posterUrl}" alt="${title}" class="moviePoster">
-        <div class="movieTitle">${title}</div>
+        <div class="movieTitle" [data-testid: movie-title]>${title}</div>
         <div class="rating">
           <span class="rate">${vote_average}</span>
-          <span class="year">${release_date ? release_date.slice(0, 4) : ''}</span>
+          <span [data-testid: movie-release-date] class="year">${release_date ? release_date.slice(0, 4) : ''}</span>
         </div>
       `;
 
